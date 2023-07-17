@@ -69,7 +69,7 @@ header h2 {
 @media (max-width: 350px) {
   header h2 {
     
-    width: clamp(20rem, 65vw, 32.6rem);
+    width: clamp(20rem, 60vw, 32.6rem);
   }
 }
 
