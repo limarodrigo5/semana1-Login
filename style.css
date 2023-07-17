@@ -52,20 +52,24 @@ header h2 {
   color: var(--fc-heading);
   font-size: 1.2rem;
 
-  min-width: 32.6rem;
-  min-height: 1.8rem;
+  width: 32.6rem;
+  height: 1.8rem;
 
   top: 8.7rem;
   left: 2.9rem;
 }
 
-.header-bt, 
-.ellipse1, 
-.ellipse2 {
-    display: none;
+@media (max-width: 350px) {
+  header h2 {
+    width: clamp(20rem, 100vw, 32.6rem);
+  }
 }
 
-
+.header-bt,
+.ellipse1,
+.ellipse2 {
+  display: none;
+}
 
 main {
   background: var(--bg-primary);
@@ -113,8 +117,8 @@ main {
 }
 
 .inside-main span:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .input-email {
@@ -125,7 +129,6 @@ main {
   padding: 1.8rem 2.6rem;
   border-radius: 3rem;
   border: 1px solid #eee;
-  
 }
 
 .input-password {
@@ -149,7 +152,6 @@ input {
   color: var(--fc-title);
   opacity: 0.3;
   font-family: "Poppins", sans-serif;
-  
 }
 
 .login-bt {
@@ -181,136 +183,111 @@ input {
 }
 
 .inside-main p:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-@media (min-width:1024px) {
-
-.page {
+@media (min-width: 1024px) {
+  .page {
     display: grid;
     grid-template-columns: 86rem 1fr;
     max-width: clamp(102.4rem, 144rem, 98vw);
-     max-height: calc(100vh - 90rem);
-     
-    
-}
+    max-height: calc(100vh - 90rem);
+  }
 
-.mobile-bg {
+  .mobile-bg {
     display: none;
-}
+  }
 
-header {
+  header {
     position: relative;
-    background-image: url('./assets-login/Bg-desktop.svg');
+    background-image: url("./assets-login/Bg-desktop.svg");
     width: 86rem;
-min-height: 90rem;
-overflow: hidden;
+    min-height: 90rem;
+    overflow: hidden;
+  }
 
-}
-
-
-.header-group {
+  .header-group {
     position: relative;
     display: grid;
     grid-template-rows: auto auto auto;
-    
-    
+
     align-items: flex-start;
     width: 48.9rem;
     height: 18.7rem;
     left: 15.7rem;
     top: 37.1rem;
   }
-  
 
-header h1 {
-    
+  header h1 {
     width: 22rem;
     height: 6rem;
     font-size: 4rem;
     font-weight: 700;
     left: 0;
     top: 0;
-    
-    
-}
+  }
 
-header h2 {
-    
+  header h2 {
     width: 48.9rem;
     height: 2.7rem;
     font-size: 1.8rem;
     font-weight: 500;
     left: 0;
-    
-    
-    
-     
-} 
+  }
 
-
-
-.header-bt {
-    
+  .header-bt {
     display: block;
     position: absolute;
     padding: 8px 30px;
-    
+
     border-radius: 30px;
     background: var(--fc-title-span);
     border: none;
 
-color: var(--bg-primary);
-font-family: Poppins;
-font-size: 14px;
-bottom: 0;
-cursor: pointer;
+    color: var(--bg-primary);
+    font-family: Poppins;
+    font-size: 14px;
+    bottom: 0;
+    cursor: pointer;
+  }
 
-}
-
-.header-bt:hover {
+  .header-bt:hover {
     transform: scale(1.1);
-  transition-delay: 30ms;
-  transition-property: transform;
-  transition-duration: 400ms;
-}
+    transition-delay: 30ms;
+    transition-property: transform;
+    transition-duration: 400ms;
+  }
 
-
-main {
-    
+  main {
     position: relative;
     width: 31.2rem;
     height: 35.6rem;
-    
+
     left: 10.8rem;
-    top: 1.3rem;    
+    top: 1.3rem;
+  }
 
-}
-
-.ellipse1,.ellipse2 {
+  .ellipse1,
+  .ellipse2 {
     position: absolute;
     display: flex;
     width: 55.7rem;
-height: 55.7rem;
+    height: 55.7rem;
 
+    border-radius: 557px;
+    border: 1px solid #0575e6;
 
-border-radius: 557px;
-border: 1px solid #0575E6;
+    color: var(--fc-title-span);
+  }
 
-
-color: var(--fc-title-span);
-}
-
-.ellipse1 {
+  .ellipse1 {
     top: 62rem;
-right: 51rem;
-}
+    right: 51rem;
+  }
 
-.ellipse2 {
+  .ellipse2 {
     top: 64.6rem;
-    right:42.9rem;
-}
-
-
+    right: 42.9rem;
+  }
 }
